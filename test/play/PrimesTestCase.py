@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(True, is_prime(2))
 
     def test_is_prime_for_large_prime(self):
-        self.assertEqual(True, is_prime(67))
+        self.assertEqual(True, is_prime(31))
 
     def test_is_prime_for_negative(self):
         self.assertEqual(False, is_prime(-1))
