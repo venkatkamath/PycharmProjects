@@ -13,8 +13,11 @@ class MyYamlTestCase(unittest.TestCase):
         self.assertEqual(['UBS', 'Lehman', 'JP Morgan & Chase'], (my_yaml.read_list('companies')))
 
     def test_read_date(self):
-        self.assertEqual(datetime.date, type(my_yaml.read_mapping('graduatedOn')))
+        self.assertTrue(isinstance(my_yaml.read_mapping('graduatedOn'), datetime.date))
         self.assertEqual(datetime.date(2002, 06, 01), my_yaml.read_mapping('graduatedOn'))
+
+    def test_read_integer(self):
+        self.assertTrue(isinstance(my_yaml.read_mapping('age'), int))
 
     def test_read_multi_line_string(self):
         expected = '''this is my first experience
