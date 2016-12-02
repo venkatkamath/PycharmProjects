@@ -1,0 +1,11 @@
+#my first yaml file
+firstName: venkatray
+last Name: kamath
+graduatedOn: 2002-06-01
+companies:
+  - UBS
+  - Lehman
+  - JP Morgan & Chase
+note: |
+  this is my first experience
+  with yaml and python. wow. pretty cool !!!
