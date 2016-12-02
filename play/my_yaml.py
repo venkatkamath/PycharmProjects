@@ -2,7 +2,7 @@ import yaml
 
 
 def read_mapping(key):
-    with open('profile.yaml', 'r') as f:
+    with open('profile.yml', 'r') as f:
         return yaml.load(f)[key]
 
 
