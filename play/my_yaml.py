@@ -1,8 +1,10 @@
 import yaml
+import os
 
 
 def read_mapping(key):
-    with open('profile.yml', 'r') as f:
+    profile_file = os.path.join(os.path.dirname(__file__), 'profile.yml')
+    with open(profile_file, 'r') as f:
         return yaml.load(f)[key]
 
 
